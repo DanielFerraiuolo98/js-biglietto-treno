@@ -15,3 +15,8 @@ const juniorAge = 17;
 const seniorAge = 65;
 let sconto;
 
+const km = parseInt(prompt("Quanti km vuoi percorrere?"));
+const age = parseInt(prompt("Quanti anni ha il passeggero?"));
+let tariffa = km * prezzoKm;
+console.log(tariffa.toFixed(2));
+
