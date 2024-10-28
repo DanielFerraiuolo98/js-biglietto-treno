@@ -7,6 +7,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 //output = tariffa;
 //output = prezzoFinale;
+"use strict"
 
 const prezzoKm = 0.21;
 const scontoJunior = 20;
@@ -20,3 +21,16 @@ const age = parseInt(prompt("Quanti anni ha il passeggero?"));
 let tariffa = km * prezzoKm;
 console.log(tariffa.toFixed(2));
 
+if(age <= juniorAge){
+    sconto = tariffa * 20 / 100;
+}
+else if(age >= seniorAge){
+    sconto = tariffa * 40 / 100;
+}
+else {
+    sconto = 0;
+}
+
+const prezzoFinale = tariffa - sconto;
+console.log(prezzoFinale.toFixed(2));
+console.log("Il prezzo finale del tuo biglietto è: " + prezzoFinale.toFixed(2));
